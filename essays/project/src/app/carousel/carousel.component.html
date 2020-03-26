@@ -1,0 +1,74 @@
+<div id="container">
+<ngb-carousel 
+[showNavigationArrows]="true" 
+[showNavigationIndicators]="true"
+interval="1200"
+[keyboard]="true"
+[pauseOnHover]="true"
+[wrap]="true"
+[activeId]="'firstSlide'">
+    <ng-template ngbSlide id="firstSlide">
+     
+      <div class="picsum-img-wrapper"  style="width:100%">
+        <img src="assets/img/foyer1.jpg" alt="Angular Carousel 1"class="mh-100" style="width: 100%; height: 492px">
+      </div>
+      <div class="carousel-caption">
+        
+      </div>
+    </ng-template>
+    <ng-template ngbSlide id="secondSlide">
+      <div class="picsum-img-wrapper"  style="width:100%"
+      >
+        <img src="assets/img/foyer2.jpg" alt="Angular Carousel 2" class="mh-100" style="width: 100%; height: 492px">
+      </div>
+      <div class="carousel-caption">
+        
+      </div>
+    </ng-template>
+    <ng-template ngbSlide id="thirdSlide">
+        <div class="picsum-img-wrapper"  style="width: 100%"
+        >
+          <img src="assets/img/foyer3.jpg" alt="Angular Carousel 3" class="mh-100" style="width: 100%; height: 492px">
+        </div>
+        <div class="carousel-caption">
+          
+        </div>
+      </ng-template>
+      <ng-template ngbSlide id="fourthSlide">
+        <div class="picsum-img-wrapper"  style="width: 100%"
+        >
+          <img src="assets/img/foyer4.png" alt="Angular Carousel 4"class="mh-100" style="width: 100%; height: 492px">
+        </div>
+        <div class="carousel-caption">
+          
+        </div>
+      </ng-template>
+  </ngb-carousel>
+
+  <div class="s01">
+    <form>
+      
+      <div class="inner-form">
+        <div id="div1"class="input-field first-wrap">
+          <select id="ecole">
+            <option value="" disabled selected>Choisir votre Ecole</option>
+            <option >ENSIT</option>
+            <option >ENIT</option>
+            <option >FST</option>
+            <option >ESSTT</option>
+          </select>
+        </div>
+        <div id="div2" class="input-field second-wrap">
+          <select id="logement">
+            <option value="" disabled selected>foyer / maison</option>
+            <option >Foyer</option>
+            <option >Maison</option>
+          </select>
+        </div>
+        <div id="div3"class="input-field third-wrap">
+          <button class="btn-search" type="button">Search</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,86 @@
+<!-- Toolbar -->
+<mat-toolbar id="tool" #toolbar [class.sticky] = "sticky" color="primary" class="header">
+  <div>Material Theme</div>
+  <span class="nav-tool-items">
+    <mat-icon (click)="sidenav.toggle()" class="hamburger">menu</mat-icon>
+  </span>
+</mat-toolbar>
+
+<mat-sidenav-container>
+  <!-- Sidenav -->
+  <mat-sidenav   #sidenav [mode]="isBiggerScreen() ? 'over' : 'side'" [(opened)]="opened" [fixedInViewport]="true"
+    [fixedTopGap]>
+    <mat-nav-list>
+      <a mat-list-item>
+        <mat-icon>dashboard</mat-icon> Dashboard
+      </a>
+      <a mat-list-item>
+        <mat-icon>person</mat-icon> User Profile
+      </a>
+      <a mat-list-item>
+        <mat-icon>content_paste</mat-icon> Table List
+      </a>
+      <a mat-list-item>
+        <mat-icon>library_books</mat-icon> Typography
+      </a>
+      <a mat-list-item>
+        <mat-icon>location_on</mat-icon> Maps
+      </a>
+      <a mat-list-item>
+        <mat-icon>calendar_today</mat-icon> Calendar
+      </a>
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <!-- Main content -->
+  <mat-sidenav-content >
+
+    <!-- Applying the mat-tyography class adds styles for native elements. -->
+    
+
+    <!-- Angular material cards -->
+    <div class="productCards">
+      <mat-grid-list cols="4" rowHeight="200px">
+        <mat-grid-tile [colspan]="4" [rowspan]="3">
+          <mat-grid-tile-header id="header1"[style.background]="'grey'">
+            <h3><i class="fa fa-angle-right"></i> Bienvenue</h3>
+          </mat-grid-tile-header>
+          <app-carousel></app-carousel>
+
+         
+
+        </mat-grid-tile>
+        <mat-grid-tile [colspan]="4" [rowspan]="3">
+          <mat-grid-tile-header [style.background]="'grey'">
+            <h3><i class="fa fa-angle-right"></i> A propos de nous</h3>
+          </mat-grid-tile-header>
+            
+        </mat-grid-tile>
+        <mat-grid-tile [colspan]="4" [rowspan]="3">
+          <mat-grid-tile-header [style.background]="'grey'">
+            <h3><i class="fa fa-angle-right"></i> Nouveautés</h3>
+          </mat-grid-tile-header>
+            
+        </mat-grid-tile>
+        <mat-grid-tile [colspan]="4" [rowspan]="3">
+          <mat-grid-tile-header [style.background]="'grey'">
+            <h3><i class="fa fa-angle-right"></i> Bienvenue</h3>
+          </mat-grid-tile-header>
+            
+        </mat-grid-tile>
+        <mat-grid-tile [colspan]="4" [rowspan]="3">
+          <mat-grid-tile-header [style.background]="'grey'">
+            <h3><i class="fa fa-angle-right"></i> Bienvenue</h3>
+          </mat-grid-tile-header>
+            
+        </mat-grid-tile>
+      </mat-grid-list>
+    </div>
+
+  <footer></footer>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+
+
+<router-outlet></router-outlet>
